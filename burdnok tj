@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burdnok - Пул кор кунед</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Хуш омадед ба Burdnok!</h1>
+        <p>Бо иҷрои вазифаҳо пул кор кунед.</p>
+        <button onclick="showLogin()">Вуруд / Сабти ном</button>
+    </header><section id="auth" style="display:none;">
+    <h2>Вуруд ё Сабти ном</h2>
+    <input type="text" id="username" placeholder="Номи корбарӣ">
+    <input type="password" id="password" placeholder="Рамз">
+    <button onclick="registerUser()">Сабти ном</button>
+    <button onclick="loginUser()">Вуруд</button>
+</section>
+
+<section id="tasks">
+    <h2>Вазифаҳои дастрас</h2>
+    <ul>
+        <li>Тамошои видео - <button onclick="earnPoints(10)">Гирифтани 10 хол</button></li>
+        <li>Пур кардани назарсанҷӣ - <button onclick="earnPoints(20)">Гирифтани 20 хол</button></li>
+        <li>Насби барнома - <button onclick="earnPoints(30)">Гирифтани 30 хол</button></li>
+    </ul>
+</section>
+
+<section id="balance">
+    <h2>Ҳисоби шумо</h2>
+    <p>Ҳол: <span id="points">0</span></p>
+    <button onclick="withdrawMoney()">Пулро бурдан</button>
+</section>
+
+<section id="payment">
+    <h2>Интихоби усули пардохт</h2>
+    <select id="payment-method">
+        <option value="dushanbe_city">Душанбе Сити</option>
+        <option value="alif">Алиф</option>
+        <option value="amonat">Амонатбонк</option>
+        <option value="other">Кортҳои Тоҷикистон</option>
+    </select>
+    <input type="text" id="card-number" placeholder="Рақами корт">
+    <button onclick="processPayment()">Пардохт</button>
+</section>
+
+<footer>
+    <p>&copy; 2025 Burdnok.tj - Ҳамаи ҳуқуқҳо ҳифз шудаанд.</p>
+</footer>
+
+</body>
+</html>
